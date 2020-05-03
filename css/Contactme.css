@@ -1,0 +1,209 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    margin:0px;
+}
+
+.nav{
+    height:171px;
+    background-color: white;
+    margin:0px 263px 0px 263px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;   
+}
+.nav .navigationbar{
+    opacity:1;
+}
+.nav li{
+    float:right;
+    font-size: 20px;
+    list-style-type: none;
+    color:#707070;
+    margin-left: 40px;
+    text-align: center;
+    margin-top: 50px;
+    cursor: pointer;  
+}
+.nav li a{
+    text-decoration: none;
+    color: #707070;
+}
+.nav li a:hover{
+    color:#395D6C;
+}
+#nav1 a{
+    color:#395D6C;
+}
+
+#nav1{
+    animation: navbar 0.5s;
+    
+}
+@keyframes navbar{
+    from{
+       transform: translateY(-100px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+
+#nav2{
+    animation: navbar2 1s;
+}
+@keyframes navbar2{
+    from{
+        transform: translateY(-250px)
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+#nav3{
+    animation: navbar3 1.5s;
+}
+@keyframes navbar3{
+    from{
+        transform: translateY(-350px)
+    }
+    to{
+        transform: translateY(0px)
+    }
+}
+#nav4{
+    animation: navbar4 2s;
+}
+@keyframes navbar4{
+    from{
+        transform: translateY(-450px)
+    }
+    to{
+        transform: translateY(0px)
+    }
+}
+h1{
+    margin-left: 263px;
+    color:#575757;
+    font-size: 25px;
+}
+.form {
+    margin-left:263px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: left;
+} 
+.form h2{
+    font-size: 20px;
+    color: #707070;
+   
+}
+.form input{
+    margin-bottom: 15px;
+    margin-left: 40px;
+    padding: 10px;
+    width:490px;
+    height:40px;
+}
+.firstrow, .secondrow, .thirdrow, .forthrow{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.table{
+    position: absolute;
+    left: 350px;
+}
+
+#Message{
+    height: 120px;
+    text-align: flex-start;
+    justify-content: flex-start;
+}
+button{
+    width:169px;
+    height:40px;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px  lightgrey;
+    justify-content: center;
+    align-items: center;
+    border-style: none;
+    cursor: pointer;
+    font-size: 17px;
+    color:#D6A075;
+    margin:0 480px;
+    position: relative;
+    top: 100px;
+    left: -12px;
+    
+}
+
+
+.sideicons {
+    grid-area: sideicons;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right:263px; 
+    top: 150px;
+    cursor:pointer;
+}
+.fig1 img, .fig2 img, .fig3 img {
+    width: 60px;
+    height: 60px;
+    
+}
+.fig1{
+    display:inline-flex;
+    position:relative;
+    left: -60px;
+    top:160px; 
+    justify-content: flex-start;
+}
+.fig1 a{
+    text-decoration: black;
+}
+.fig1 p{
+    color:black;
+    position: relative;
+    left: 60px;
+    top:-60px;
+    margin-left: 0px;
+
+} 
+.fig2{
+    display:inline-flex;
+    position:relative;
+    top:100px; 
+    left: -60px;
+    justify-content: flex-start;
+}
+.fig3{
+    display:inline-flex;
+    position:relative;
+    top:40px; 
+    left: -60px;
+    justify-content: flex-start;
+}
+.fig2 p{
+    position: relative;
+    left: 70px;
+    top:-60px;
+    margin-left: 0px;
+    text-decoration: none;
+    color: black;
+}
+.fig2 a{
+    text-decoration: none;
+}
+.fig3 p{
+    position: relative;
+    left: 75px;
+    top: -60px;
+    margin-left: 0px;
+    text-decoration: none;
+    color: black;
+}
+.fig3 a{
+    text-decoration: none;
+}

@@ -1,0 +1,945 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    margin:0px;
+    background-image: url("../image/Background1.jpg"),url("../image/Background2.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 796px;
+    background-position: 0 790px, 0 2050px;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+.nav{
+    height:171px;
+    background-color: white;
+    margin:0px 263px 0px 263px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;   
+}
+.nav .navigationbar{
+    opacity:1;
+}
+.nav li{
+    float:right;
+    font-size: 20px;
+    list-style-type: none;
+    color:#707070;
+    margin-left: 40px;
+    text-align: center;
+    margin-top: 50px;
+    cursor: pointer;  
+}
+.nav li a{
+    text-decoration: none;
+    color: #707070;
+}
+.nav li a:hover{
+    color:#395D6C;
+}
+#nav4 a{
+    color:#395D6C;
+}
+
+.nav li:hover{
+    color:#395D6C;
+}
+#nav1{
+    animation: navbar 0.5s;
+}
+@keyframes navbar{
+    from{
+       transform: translateY(-100px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+
+#nav2{
+    animation: navbar2 1s;
+}
+@keyframes navbar2{
+    from{
+        transform: translateY(-250px)
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+#nav3{
+    animation: navbar3 1.5s;
+}
+@keyframes navbar3{
+    from{
+        transform: translateY(-350px)
+    }
+    to{
+        transform: translateY(0px)
+    }
+}
+#nav4{
+    animation: navbar4 2s;
+}
+@keyframes navbar4{
+    from{
+        transform: translateY(-450px)
+    }
+    to{
+        transform: translateY(0px)
+    }
+}
+/*Header*/
+
+.Header{
+    margin: 0px 263px 0px 263px;
+    height:597px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 166px 166px 266px;
+    grid-template-areas: 
+    "title      downloadButton"
+    "paragraph  sideicons"
+    "buttons    buttons";
+
+}
+.title {
+grid-area: title;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+}
+
+.title hr{
+    border:2px solid #D6A075;
+    width: 70px;
+    position: absolute;
+    top: 268px;
+    animation: line 1s;
+}
+@keyframes line{
+    from{
+        width: 200px;
+        transform:  translateX(-500px)  
+    }
+    to{
+        width: 70px;
+        transform:  translateX(0) 
+    }
+}
+.title h1 {
+    color:#395D6C;
+    font-size: 40px;
+    font-weight: bold;
+    position: absolute;
+    top: 210px;
+    left: 350px;
+    animation: hello 1s;  
+}
+@keyframes hello{
+    from{
+        letter-spacing: 20px;
+        opacity:0
+    }
+    to{
+        letter-spacing: 0px;
+        opacity:1
+    }
+}
+.title h2 {
+    color:#395D6C;
+    font-weight: bold;
+    font-size: 40px;
+    position: absolute;
+    top: 267px;  
+}
+.paragraph {
+    grid-area: paragraph;
+    color:#707070;
+    font-size: 23px;
+    width: 380px;
+    position:absolute;
+    top: 330px;
+    margin-top: 35px;
+    line-height: 32px;
+}
+
+.downloadButton {
+    grid-area: downloadButton;
+    display: flex;
+    position: absolute;
+    top:250px;
+    right:263px;
+    width:169px;
+    height:40px;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px  lightgrey;
+    justify-content: center;
+    align-items: center;
+    border-style: none;
+    cursor: pointer; 
+}
+.downloadButton p{
+    text-align: center;
+    float: right;
+    font-size: 17px;
+    color:#D6A075;
+}
+.overflow{
+position: absolute;
+left:100;
+right: 0%;
+border-radius: 12px;
+background-color: #395D6C;
+width:0;
+height:100%;
+align-items: center;
+justify-items: center;
+overflow: hidden;
+transition: 0.5s ease;
+}
+.text{
+    color: white;
+    font-size: 17px;
+    position: relative;
+    top:9px;
+    text-align: center; 
+}
+.text a{
+    text-decoration: none; 
+    color: white;
+}
+.downloadButton:hover .overflow{
+    width:100%;
+    height:100%;
+}
+
+
+.sideicons {
+    grid-area: sideicons;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right:263px; 
+    cursor:pointer;
+}
+.fig1 img, .fig2 img, .fig3 img {
+    width: 60px;
+    height: 60px;
+    
+}
+.fig1{
+    display:inline-flex;
+    position:relative;
+    left: -60px;
+    top:160px; 
+    justify-content: flex-start;
+}
+.fig1 a{
+    text-decoration: black;
+}
+.fig1 p{
+    color:black;
+    position: relative;
+    left: 60px;
+    top:-60px;
+    margin-left: 0px;
+
+} 
+.fig2{
+    display:inline-flex;
+    position:relative;
+    top:100px; 
+    left: -60px;
+    justify-content: flex-start;
+}
+.fig3{
+    display:inline-flex;
+    position:relative;
+    top:40px; 
+    left: -60px;
+    justify-content: flex-start;
+}
+.fig2 p{
+    position: relative;
+    left: 70px;
+    top:-60px;
+    margin-left: 0px;
+    text-decoration: none;
+    color: black;
+}
+.fig2 a{
+    text-decoration: none;
+}
+.fig3 p{
+    position: relative;
+    left: 75px;
+    top: -60px;
+    margin-left: 0px;
+    text-decoration: none;
+    color: black;
+}
+.fig3 a{
+    text-decoration: none;
+}
+
+.buttons{
+    grid-area: buttons;
+    display: flex;
+    flex-direction: row;
+    position:relative;
+    margin-top: 50px;
+    cursor:pointer;
+    text-align: center;
+}
+.but1 img, .but2 img, .but3 img{
+    width: 105px;
+    box-shadow: 0 3px 6px #00000029;
+    border-radius: 100%;
+    border: 0 solid white;
+}
+.but1, .but2, .but3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 136px;
+}
+.but1 p, .but2 p, .but3 p{
+font-size: 18PX;
+color: #AC774C;
+}
+.overlay{
+    opacity: 0;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+}
+.overlay img{
+    width:107px;
+    box-shadow: 0 3px 6px #00000029;
+    border-radius: 100%;
+    border: 0 solid white;
+    position: relative;
+    top: -165px;
+}
+.overlay p{
+    color: #386C81;
+    position: relative;
+    top: -171px;
+ }
+.but1:hover .overlay{
+    opacity:1;
+    
+}
+.overlay a, .overlay2 a, .overlay3 a{
+    text-decoration: none;
+}
+
+.overlay2{
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+.overlay2 img{
+    width:107px;
+    box-shadow: 0 3px 6px #00000029;
+    border-radius: 100%;
+    border: 0 solid white;
+    position: relative;
+    top: -165px;
+    
+}
+.overlay2 p{
+    color: #386C81;
+    position: relative;
+    top: -171px;
+ }
+ .but2:hover .overlay2{
+    opacity:1;
+}
+.overlay3{
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    
+}
+.overlay3 img{
+    width:107px;
+    box-shadow: 0 3px 6px #00000029;
+    border-radius: 100%;
+    border: 0 solid white;
+    position: relative;
+    top: -165px;
+}
+
+.overlay3 p{
+    color: #386C81;
+    position: relative;
+    top: -171px;
+ }
+ .but3:hover .overlay3{
+    opacity:1;
+}
+
+
+/*UX*/
+.UX{
+    display:grid;
+    height:768px;
+    width: auto;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "Topicon"
+    "UXprojects"
+    "upbutton";
+}
+
+.Topicon{
+    grid-area: Topicon;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    position: relative;
+    top:50px;
+}
+.Topicon img{
+    width:200px;
+}
+.Topicon hr{
+    border:1px solid #386C81;
+    width: 230px;
+    justify-content: center;
+}
+.Topicon h1{
+    font-size: 25px;
+    font-weight: bold;
+    width:200px;
+    color:#386C81;
+    text-align: center;
+      
+}
+
+.UXprojects{
+    grid-area: UXprojects;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.UXprojects figure{
+    border: 1px solid #919293;
+    background-color: white;
+    padding:20px;
+    width:250px;
+    height:260px;
+    align-items: center;
+    position:relative;
+    top:50px;
+    cursor:pointer;
+}
+
+.UXprojects img{
+    width:159px;
+    align-items: center;
+    justify-items: center;
+    margin:20px;
+    position:relative;
+    left:20px;
+}
+.UXprojects figcaption{
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
+    color:#386C81;
+}
+
+.upbutton{
+    grid-area: upbutton;
+    float: right;
+    display: flex;
+    position: relative;
+    top: 50px;
+    left: -210px;
+    justify-content: flex-end;
+    margin-top: 20px;
+    cursor:pointer;
+}
+
+
+.upbutton img{
+    width:64px;
+    height:64px;
+    border-radius: 100%;
+    box-shadow: 0px 3px 6px #00000029;
+}
+
+/*Graphic*/
+
+.Graphic{
+    display:grid;
+    width: auto;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "Topicon"
+    "GDprojects"
+    "upbutton";
+}
+
+.GDprojects{
+    grid-area: GDprojects;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+.GDprojects figure{
+    border: 1px solid #919293;
+    background-color: white;
+    padding:20px;
+    width:250px;
+    height:260px;
+    align-items: center;
+    position:relative;
+    top:50px;
+    cursor:pointer;
+}
+.GDprojects img{
+    width:159px;
+    align-items: center;
+    justify-items: center;
+    margin:20px;
+    position:relative;
+    left:20px;
+    
+}
+.active{
+    opacity:1;
+}
+.GDprojects figcaption{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color:#AC774C;
+}
+.notActive{
+    width:159px;
+    align-items: center;
+    justify-items: center;
+    margin:20px;
+    position:relative;
+    left:20px;
+    top: -227px;
+    opacity:0;
+}
+/*Motion*/
+
+.Motion{
+    display:grid;
+    width: auto;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "Topicon"
+    "Mprojects"
+    "upbutton";
+}
+.Mprojects{
+    grid-area: UXprojects;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+.Mprojects figure{
+    border: 1px solid #919293;
+    background-color: white;
+    padding:20px;
+    width:250px;
+    height:260px;
+    align-items: center;
+    position:relative;
+    top:50px;
+    cursor:pointer;
+}
+.Mprojects img{
+    width:159px;
+    align-items: center;
+    justify-items: center;
+    margin:20px;
+    position:relative;
+    left:20px;
+}
+.Mprojects figcaption{
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
+    color:#386C81;
+}
+
+
+.footer{
+    height:100px;
+}
+
+  
+
+   
+/*Ipad Media Quary*/
+
+@media only screen and (max-width:700px){
+    body{
+    background-size: 1200px auto;
+    background-position: 0 1100px, 0 2050px;
+    
+    }
+
+    .nav{
+        display:inline-flex;
+        flex-direction: row;
+        position: relative;
+        left:480px;
+        margin:0;
+    }
+    .nav li{
+        float:right;
+        font-size: 20px;
+        margin-left: 40px;
+    }
+
+    .Header{
+        margin:100px;
+    }
+    .title {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        }
+        
+        .title hr{
+            border:2px solid #D6A075;
+            width: 70px;
+            position: absolute;
+            top: 268px;
+            animation: line 1s;
+        }
+        .title h1{
+            position: absolute;
+            top: 205px;
+            left: 180px;
+        }
+
+        .downloadButton {
+            position: absolute;
+            top:250px;
+            right:-300px;
+        }
+        .sideicons {
+            position: absolute;
+            right:-300px; 
+            top: 160px;
+        }
+        .upbutton{
+            position: relative;
+            top: 70px;
+            right:50px;
+        }
+}
+
+/* Mobile size*/
+@media screen and (max-width:400px){
+    body{
+        background-size: 0;
+    }
+    .nav {
+        opacity: 0;
+        display:none;
+    }
+    
+    .Header{
+        margin-left: 40px;
+        margin-right: 40px;
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 1fr  1fr 1fr 1fr;
+        grid-template-areas: 
+        "title "
+        "paragraph"
+        "download"
+        "buttons";
+    }
+    .sideicons{
+        opacity:0;
+        display:none;
+    }
+    .title{
+        text-align: center;
+        align-content: center;
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+    }
+    .title hr{
+            border:2px solid #D6A075;
+            width: 70px;
+            position: absolute;
+            top: 268px;
+            left: auto;
+            animation: line 1s;
+        }
+    .title h1 {
+        font-size: 40px;
+        font-weight: bold;
+        position: absolute;
+        top: 190px;
+        left:auto;
+            
+    }
+    .title h2 {
+        font-weight: bold;
+        font-size: 25px;
+        position: absolute;
+        top: 270px;
+        float:left;
+        text-align: center;
+        
+    }
+    .paragraph{
+        grid-area: paragraph;
+        font-size: 15px;
+        width: auto;
+        max-width: 300px;
+        position:absolute;
+        top: 300px;
+        left:auto;
+        margin-top: 35px;
+        line-height: 25px;
+        text-align: center;
+    }
+    .downloadButton {
+        grid-area: download;
+        display: flex;
+        align-content: center;
+        position:absolute;
+        top:500px;
+        left: 100px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+    }
+    .buttons{
+        grid-area: buttons;
+        display: flex;
+        flex-direction: row;
+        position:absolute;
+        top: 550px;
+        left: auto;
+        cursor:pointer;
+ 
+    }
+    .but1 img, .but2 img, .but3 img{
+        width: 55px;
+        box-shadow: 0 3px 6px #00000029;
+        border-radius: 100%;
+        border: 0 solid white;
+    }
+    .but1, .but2, .but3{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-right:40px;
+    }
+    .but1 p, .but2 p, .but3 p{
+    font-size: 12PX;
+    color: #AC774C;
+    }
+
+.overlay, .overlay2, .overlay3{
+    display: none;
+}
+
+.UXprojects{
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+.Topicon{
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    position:relative;
+    text-align: center;
+}
+.Topicon img{
+    width:150px;
+}
+.Topicon hr{
+    width: 230px;
+    justify-content: center;
+}
+.Topicon h1{
+    font-size: 20px;
+    font-weight: bold;
+    width:200px;
+    text-align: center;  
+}
+.UXprojects figure{
+    padding:20px;
+    width:200px;
+    height:210px;
+    position:relative;
+    align-content: center;
+    top:150px;
+    cursor:pointer;
+}
+.UXprojects img{
+    width:120px;
+    justify-items: center;
+    align-items: center;
+    margin:10px;
+    left:30px;
+}
+.UXprojects figcaption{
+    font-size: 17px;
+    font-weight: normal;
+}
+
+.upbutton{
+    position: relative;
+    top: 150px;
+    left:-125px;
+    
+}
+.upbutton img{
+    width:64px;
+    height:64px;
+}
+
+/*Mobile Graphic*/
+.Graphic{
+    margin-top: 400px;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+.GDprojects{
+    flex-direction: column;
+}
+.Topicon{
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    position: relative;
+    top:150px;
+    text-align: center;
+}
+.Topicon img{
+    width:150px;
+}
+.Topicon hr{
+    width: 230px;
+    justify-content: center;
+}
+.Topicon h1{
+    font-size: 20px;
+    font-weight: bold;
+    width:200px;
+    text-align: center;  
+}
+.GDprojects figure{
+    padding:20px;
+    width:200px;
+    height:210px;
+    position:relative;
+    align-content: center;
+    top:150px;
+    cursor:pointer;
+}
+.GDprojects img{
+    width:120px;
+    justify-items: center;
+    align-items: center;
+    margin:10px;
+    left:30px;
+}
+.GDprojects figcaption{
+    font-size: 17px;
+    font-weight: normal;
+}
+
+.upbutton{
+    position: relative;
+    top: 150px;
+    left:-125px;
+}
+.upbutton img{
+    width:64px;
+    height:64px;
+}
+
+/*mobile Motion*/
+
+.Motion{
+    margin-top: 30px;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+.Mprojects{
+    flex-direction: column;
+}
+.Topicon{
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    position: relative;
+    top:150px;
+    text-align: center;
+}
+.Topicon img{
+    width:150px;
+}
+.Topicon hr{
+    width: 230px;
+    justify-content: center;
+}
+.Topicon h1{
+    font-size: 20px;
+    font-weight: bold;
+    width:200px;
+    text-align: center;  
+}
+.Mprojects figure{
+    padding:20px;
+    width:200px;
+    height:210px;
+    position:relative;
+    align-content: center;
+    top:150px;
+    cursor:pointer;
+}
+.Mprojects img{
+    width:120px;
+    justify-items: center;
+    align-items: center;
+    margin:10px;
+    left:30px;
+}
+.Mprojects figcaption{
+    font-size: 17px;
+    font-weight: normal;
+}
+
+.upbutton{
+    position: relative;
+    top: 150px;
+    left:-125px;
+}
+.upbutton img{
+    width:64px;
+    height:64px;
+}
